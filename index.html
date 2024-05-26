@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recept</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            /* font-weight: 600; */
+            font-style: normal;
+        }
+
+        .textareas h1 {
+            font-size: 11px;
+            line-height: 54px;
+            color: #625f58d6;
+           
+        }
+        .textareass h1{
+            font-size: 17px;
+            line-height: 21px;
+            font-family: Arial Black !important;
+            font-weight: 400 !important;
+           
+        }
+        .nicerText h1{
+                line-height: 30px;
+                font-weight: 400 !important;
+        }
+        .semibold{
+            font-weight: 400 !important;
+        }
+        .shopname{
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body class="bg-[#ddd]">
+    <main>
+        <div class="container mx-auto flex justify-center items-center">
+            <section class="flex flex-col lg:flex-row gap-20 justify-center items-center h-[100vh]">
+                <div class="">
+                    <div class="">
+                        <div class="flex flex-col bg-white rounded shadow-lg p-12">
+                            <h1 class="text-black text-2xl mb-5">Please Update data here</h1>
+
+                            <label class="font-semibold text-lg mt-3" for="date">Date</label>
+                            <input
+                                class="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2 text-[#888181]"
+                                type="date" name="date" id="date">
+                            <!-- <label class="font-semibold text-lg mt-3" for="date">Expire Date</label>
+                            <input
+                                class="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2 text-[#888181]"
+                                type="date" name="date" id="exDate"> -->
+                            <label class="font-semibold text-lg mt-3" for="appt">Time</label>
+                            <input
+                                class="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2 text-[#888181]"
+                                type="time" min="09:00" max="18:00" id="time" name="appt">
+                                <label class="font-semibold text-lg mt-3" for="appt">Shop</label>
+
+                            <select name="" id="selectshop" class="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2 text-[#888181]">
+                                    <option value="KFC">KFC</option>
+                                    <option value="Subway">Subway</option>
+                                    <option value="Starbucks">Starbucks</option>
+                                    <option value="Domino's Pizza">Domino's Pizza</option>
+                                    <option value="Pizza Hut">Pizza Hut</option>
+                                    <option value="Sainsbury's">Sainsbury's</option>
+                                    <option value="Asda">Asda</option>
+                                    <option value="Shell">Shell</option>
+                                    <option value="Costa Coffee">Costa Coffee</option>
+                                    <option value="Costco">Costco</option>
+                                    <option value="Tesco Superstore">Tesco Superstore</option>
+                                    
+                                </select>
+                            <button
+                                class="flex items-center justify-center h-12 px-6 w-64 bg-blue-600 mt-8 rounded font-semibold text-sm text-blue-100 hover:bg-blue-700"
+                                id="submit">Update</button>
+                                <button
+                                class="flex items-center justify-center h-12 px-6 w-64 bg-blue-600 mt-8 rounded font-semibold text-sm text-blue-100 hover:bg-blue-700"
+                                id="timepress">Time Change</button>
+                                <button
+                                class="flex items-center justify-center h-12 px-6 w-64 bg-blue-600 mt-8 rounded font-semibold text-sm text-blue-100 hover:bg-blue-700"
+                                id="shop">Shop Change</button>
+                                <!-- <button
+                                class="flex items-center justify-center h-12 px-6 w-64 bg-blue-600 mt-8 rounded font-semibold text-sm text-blue-100 hover:bg-blue-700"
+                                id="nameChanger">Name Change</button> -->
+                                
+                        </div>
+                    </div>
+                </div>
+                <div class="right flex justify-center receptBg h-[850px] w-full items-center" id="receptBackground">
+                    <section class="recept w-full h-full relative">
+                        <img class="w-full h-full relative" id="bg_image" src="image/subway.png" alt="">
+                        <!-- <h1 class="font-semibold text-[21px] text-right absolute bottom-[427px] left-[117px] text-[#133253da]"><span id="randomOrder">123456</span>
+                        </h1> -->
+                        <!-- <h1 class="font-semibold text-[21px] text-right absolute bottom-[117px] left-[427px] text-[#133253da]"><span id="nameUpdate">Asad</span>
+                        </h1> -->
+                        <!-- <div class="absolute top-[17px] left-[201px]">
+                            <h1 class="text-[25px] shopname " id="shopChange">Costa Coffee</h1>
+                        </div> -->
+                       
+                        <div class="absolute bottom-[-220px] left-[-37px] textareas">
+
+                            <div class="absolute bottom-[575px] left-[327px] textareas">
+
+                                <h1 class="font-semibold text-right"><span id="firstPrizeChange">5.26</span>
+                                </h1>
+                            </div> 
+                            <div class="absolute bottom-[561px] left-[327px] textareas">
+    
+                                <h1 class="font-semibold text-right"><span id="secoundPrizeChange">10.18</span>
+                                </h1>
+                            </div> 
+                            <div class="absolute bottom-[546px] left-[327px] textareas">
+    
+                                <h1 class="font-semibold text-right"><span id="thirdPrizeChange">15.88</span>
+                                </h1>
+                            </div> 
+                            <div class="absolute bottom-[530px] left-[327px] textareas">
+    
+                                <h1 class="font-semibold text-right"><span id="fourthPrizeChange">20.96</span>
+                                </h1>
+                            </div>
+                            <div class="absolute bottom-[515px] left-[327px] textareas">
+    
+                                <h1 class="font-semibold text-right"><span id="fivePrizeChange">25.46</span>
+                                </h1>
+                            </div>
+                            <div class="absolute bottom-[500px] left-[327px] textareas">
+    
+                                <h1 class="font-semibold text-right"><span id="sixPrizeChange">16.28</span>
+                                </h1>
+                            </div>
+                            <div class="absolute bottom-[485px] left-[327px] textareas">
+    
+                                <h1 class="font-semibold text-right"><span id="sevenPrizeChange">25.33</span>
+                                </h1>
+                            </div>
+                            <div class="absolute bottom-[470px] left-[327px] textareas">
+    
+                                <h1 class="font-semibold text-right"><span id="eightPrizeChange">25.33</span>
+                                </h1>
+                            </div>
+                            <div class="absolute bottom-[455px] left-[327px] textareas">
+    
+                                <h1 class="font-semibold text-right"><span id="ninePrizeChanges">25.33</span>
+                                </h1>
+                            </div>
+                            <div class="absolute bottom-[440px] left-[327px] textareas">
+    
+                                <h1 class="font-semibold text-right"><span id="tenPrizeChange">25.33</span>
+                                </h1>
+                            </div>
+                            <div class="absolute bottom-[425px] left-[327px] textareas">
+    
+                                <h1 class="font-semibold text-right"><span id="eleventPrizeChange">25.33</span>
+                                </h1>
+                            </div>
+                            <div class="absolute bottom-[410px] left-[327px] textareas">
+    
+                                <h1 class="font-semibold text-right"><span id="twelvePrizeChange">25.33</span>
+                                </h1>
+                            </div>
+                            <div class="absolute bottom-[395px] left-[327px] textareas">
+    
+                                <h1 class="font-semibold text-right"><span id="thirteenPrizeChange">25.33</span>
+                                </h1>
+                            </div>
+                            <div class="absolute bottom-[383px] left-[327px] textareas">
+    
+                                <h1 class="font-semibold text-right"><span id="fourteenPrizeChange">25.33</span>
+                                </h1>
+                            </div>
+                            
+
+                            <div class="absolute bottom-[367px] left-[327px] textareas">
+    
+                                <h1 class="font-semibold text-right"><span id="subtotalChange">180.72</span>
+                                </h1>
+                            </div>
+                            
+                            
+                            <div class="absolute bottom-[353px] left-[327px] textareas">
+    
+                                <h1 class="font-bold  text-right"><span id="totalChange">180.72</span>
+                                </h1>
+                            </div> 
+                        </div>
+                        <div class="absolute bottom-[570px] left-[110px]">
+                            <h1 class="text-[#625f58d6] semibold text-right text-[12px]"><span
+                                    id="dateChange">2024/02/08</span> 
+                                <span class="ml-[73px]" id="timeChange">7:21 PM</span>
+                            </h1>
+                            <!-- EXPIRES <span id="exDateChange">2024/05/08</span> -->
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
